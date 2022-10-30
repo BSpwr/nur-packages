@@ -30,6 +30,7 @@ rec {
   tun2socks = callPackage ./pkgs/tun2socks.nix {};
   cockpit = callPackage ./pkgs/cockpit {};
   cockpit-machines = callPackage ./pkgs/cockpit/machines.nix {};
+  cockpit-podman = callPackage ./pkgs/cockpit/podman.nix {};
   cockpit-client = cockpit.override { client = true; };
   libvirt-dbus = callPackage ./pkgs/libvirt-dbus.nix {};
   sunshine = callPackage ./pkgs/sunshine/default.nix {};

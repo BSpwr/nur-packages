@@ -35,7 +35,7 @@ in {
 
     security.pam.services.cockpit = {};
 
-    environment.systemPackages = with cpkgs; [ cockpit cockpit-machines libvirt-dbus ];
+    environment.systemPackages = with cpkgs; [ cockpit cockpit-machines cockpit-podman libvirt-dbus ];
     environment.pathsToLink = [ "/share/cockpit" ];
 
     systemd.sockets.cockpit.listenStreams = [ "" "${toString cfg.port}" ];
